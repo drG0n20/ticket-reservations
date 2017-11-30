@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
         }
 
         User user = new User();
-//        validationOfPasswordIdenitiy(registerUserDTO.getPassword(), registerUserDTO.getConfirmedPassword())
+        validationOfPasswordIdenitiy(registerUserDTO.getPassword(), registerUserDTO.getConfirmedPassword());
         user.setPassword(passwordEncoder.encode(registerUserDTO.getPassword()));
         user.setEmail(registerUserDTO.getEmail());
         user.setEnabled(false);

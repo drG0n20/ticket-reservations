@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * Created by RENT on 2017-11-20.
- */
 
 @ControllerAdvice
 public class GlobalExceptionHandler {

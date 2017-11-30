@@ -12,7 +12,7 @@
 //
 //@Configuration
 //@EnableWebSecurity
-//public class SecurityAdapter extends WebSecurityConfigurerAdapter {
+//public class UserSecurityAdapter extends WebSecurityConfigurerAdapter {
 //
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {

@@ -30,27 +30,29 @@ public class UserController {
     @GetMapping(value = "/confirmRegistration")
     public ModelAndView confirmRegistration(@RequestParam("token") String token) {
         userService.confirmRegistration(token);
-        return new ModelAndView ("redirect:/login.html");
+        return new ModelAndView("redirect:/login.html");
     }
 
     @PostMapping(value = "/resetForgotPassword")
-    public void sendEmailWhenForgotPassword (@RequestParam("email") String email,
-                                             @RequestParam ("newPassword") String newPassword,
-                                             @RequestParam ("confirmNewPassword") String confirmNewPassword) {
+    public void sendEmailWhenForgotPassword(@RequestParam("email") String email,
+                                            @RequestParam("newPassword") String newPassword,
+                                            @RequestParam("confirmNewPassword") String confirmNewPassword) {
         userService.sendEmailWhenForgotPassword(email, newPassword, confirmNewPassword);
     }
+
     @GetMapping(value = "/resetForgotPassword")
-    public ModelAndView changePasswordsWhenForgot(@RequestParam("token") String token){
+    public ModelAndView changePasswordsWhenForgot(@RequestParam("token") String token) {
         userService.changePasswordsWhenForgot(token);
         return new ModelAndView("redirect:/forgotPasswordChangeSuccessful.html");
     }
 
     @PostMapping(value = "/resetPassword")
-    void sendEmailWhenResetPassword (@RequestParam("email") String email, @RequestParam ("newPassword") String newPassword, @RequestParam ("confirmNewPassword") String confirmNewPassword) {
+    void sendEmailWhenResetPassword(@RequestParam("email") String email, @RequestParam("newPassword") String newPassword, @RequestParam("confirmNewPassword") String confirmNewPassword) {
         userService.sendEmailWhenResetPassword(email, newPassword, confirmNewPassword);
     }
+
     @GetMapping(value = "/resetPassword")
-    public ModelAndView changePasswordsWhenReset(@RequestParam("token") String token){
+    public ModelAndView changePasswordsWhenReset(@RequestParam("token") String token) {
         userService.changePasswordsWhenReset(token);
         return new ModelAndView("redirect:/forgotPasswordChangeSuccessful.html");
     }

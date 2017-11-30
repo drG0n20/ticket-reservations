@@ -22,7 +22,7 @@ public class EmailSenderImpl implements EmailSender {
             MimeMessageHelper helper = new MimeMessageHelper(mail, true);
             helper.setTo(to);
             helper.setReplyTo("ticket.java@gmail.com");
-            helper.setFrom("ticket.java@gmail.com");
+            helper.setFrom("ticket666.java@gmail.com");
             helper.setSubject(subject);
             helper.setText(content, true);
 

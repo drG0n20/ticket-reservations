@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Created by RENT on 2017-11-13.
- */
 @RestController
 @RequestMapping("/api/event")
 public class EventController {
@@ -41,12 +38,10 @@ public class EventController {
         eventService.deleteEventByUuid(eventUuid);
     }
 
-
     //Input data format: 2007-12-03T10:15:30Z
     @GetMapping("/findByDate/{date1}/{date2}")
     public List<EventDTO> findAllByDateTimeBetween(@PathVariable(value = "date1", required = false) String date1,
                                                    @PathVariable(value = "date2", required = false) String date2) {
         return eventService.findAllByDateTimeBetween(date1, date2);
     }
-
 }

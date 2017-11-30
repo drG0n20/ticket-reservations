@@ -7,7 +7,7 @@ import lombok.Setter;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
+//import javax.validation.constraints.NotEmpty;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +23,7 @@ public class User extends BaseEntity {
 
     @Column(unique = true, nullable = false)
     @Email(message = "Please, provide a valid email")
-    @NotEmpty
+//    @NotEmpty
     private String email;
 
     @Column(nullable = false)
